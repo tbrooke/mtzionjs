@@ -47,24 +47,6 @@ app.get('/signin', prismic.signin);
 app.get('/auth_callback', prismic.authCallback);
 app.post('/signout', prismic.signout);
 
-/**
-var PORT = process.env.PORT || 3000;
-
-
-http.createServer(app).listen(PORT, function() {
-  console.log('Express server listening on port ' + PORT);
-});
-
- */
-
-/**
-var server = http.createServer(function(request, response) {
-    console.log((new Date()) + ' Received request for ' + request.url);
-	response.writeHead(200, {'Content-Type': 'text/plain'});
-	  response.write("Welcome to Node.js on OpenShift!\n\n");
-	  response.end("Thanks for visiting us! \n");
-});
-*/
 
 var server = http.createServer(app);
 
