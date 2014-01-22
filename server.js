@@ -1,19 +1,15 @@
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 var port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
-var WebSocketServer = require('ws').Server
-var http = require('http');
 
-
-/**
- * Module dependencies.
- */
+// Module dependencies.
 
 var express = require('express'),
     routes = require('./routes'),
     http = require('http'),
     path = require('path'),
     engine = require('ejs-locals'),
+    WebSocketServer = require('ws').Server
     prismic = require('./prismic-helpers');
 
 var app = express();
